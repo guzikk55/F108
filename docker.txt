@@ -1,1 +1,30 @@
 docker run -d --name mongo -p 27017:27017 mongo
+Docker i MongoDB dla projektu ZadaniaPR,
+Ten plik zawiera pełną instrukcję uruchomienia bazy danych MongoDB w Dockerze oraz projektu Node.js "ZadaniaPR".
+
+Sprawdź, czy na komputerze są zainstalowane: Node.js i Docker.,
+
+Pobierz oficjalny obraz MongoDB:
+docker pull mongo:7,
+
+Uruchom kontener z MongoDB:
+docker run -d --name zadania-mongo -p 27017:27017 -v zadania-mongo-data:/data/db mongo:7,
+
+Sprawdź, czy kontener działa:
+docker ps
+Powinien być widoczny kontener nasłuchujący na porcie 27017.,
+
+W katalogu projektu utwórz plik .env z zawartością:
+MONGO_URI=mongodb://localhost:27017/tasksDB,
+
+Zainstaluj zależności projektu:
+npm install,
+
+Uruchom serwer Node.js:
+npm start,
+
+Zatrzymanie MongoDB:
+docker stop zadania-mongo
+Ponowne uruchomienie:
+docker start zadania-mongo
+
