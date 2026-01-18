@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj zadanie</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="card">
+    <h2>Dodaj zadanie</h2>
+    <form method="POST" action="/tasks/add">
+        <input type="text" name="title" placeholder="Nazwa" required>
+        <textarea name="description" placeholder="Opis" required></textarea>
+        <label><input type="checkbox" name="completed"> Zrobione</label>
+        <button type="submit">Dodaj</button>
+    </form>
+    <a href="/tasks">Powrót</a>
+</div>
+</body>
+</html>

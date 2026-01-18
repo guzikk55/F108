@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadania</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="card">
+    <h2>Zadania</h2>
+
+    <div class="filters">
+        <a href="/tasks?filter=all" class="<%= filter==='all'?'active':'' %>">Wszystkie</a>
+        <a href="/tasks?filter=todo" class="<%= filter==='todo'?'active':'' %>">Niezrobione</a>
+        <a href="/tasks?filter=done" class="<%= filter==='done'?'active':'' %>">Zrobione</a>
+    </div>
+
+ <ul class="tasks">
+    <% tasks.forEach(task => { %>
+    <li class="<%= task.completed ? 'done' : '' %>">
+        <div>
+            <strong><%= task.title %></strong>
+            <p><%= task.description %></p>
+        </div>
+        <div class="actions">
+            <a href="/tasks/edit/<%= task._id %>">Edytuj</a>
+            <a href="/tasks/delete/<%= task._id %>">Usuń</a>
+        </div>
+    </li>
+    <% }) %>
+</ul>
+
+    <a href="/tasks/add">Dodaj zadanie</a> | <a href="/logout">Wyloguj</a>
+</div>
+</body>
+</html>

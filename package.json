@@ -1,0 +1,20 @@
+{
+  "name": "zadaniapr",
+  "version": "1.0.0",
+  "description": "Aplikacja TODO z logowaniem i rejestracją",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Igor",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "ejs": "^3.1.10",
+    "express": "^4.22.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.2",
+    "express-validator": "^7.3.1",
+    "mongoose": "^8.21.0"
+  }
+}

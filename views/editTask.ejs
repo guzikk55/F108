@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Edytuj zadanie</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="card">
+    <h2>Edytuj zadanie</h2>
+    <form method="POST" action="/tasks/edit/<%= task._id %>">
+        <input type="text" name="title" value="<%= task.title %>" required>
+        <textarea name="description" required><%= task.description %></textarea>
+        <label><input type="checkbox" name="completed" <%= task.completed?'checked':'' %>> Zrobione</label>
+        <button type="submit">Zapisz</button>
+    </form>
+    <a href="/tasks">Powrót</a>
+</div>
+</body>
+</html>
