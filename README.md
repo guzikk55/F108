@@ -31,7 +31,7 @@ git clone <link_do_projektu>,
 docker run -d -p 27017:27017 --name tasks-mongo mongo:7
 5.Uruchom serwer za pomocą npm start
 6.Otwórz przegladarke na ustawionym porcie
-##Lista endpointów
+## Lista endpointów
 GET /register – formularz rejestracji
 POST /register – rejestracja użytkownika
 GET /login – formularz logowania
